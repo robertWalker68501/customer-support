@@ -11,9 +11,15 @@ declare global {
   };
 
   type NavLinkProps = {
+    id?: string;
     href: string;
     label: string;
     className?: string;
+    isMobile?: boolean;
+  };
+
+  type MobileNavProps = {
+    links: NavLinkProps[];
   };
 }
 
