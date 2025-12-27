@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
 
-const NavLink = ({ href, label, className }: NavLinkProps) => {
+const NavLink = ({ href, label, className, isMobile }: NavLinkProps) => {
   const pathname = usePathname();
 
   const isActive = pathname === href;
@@ -16,6 +16,7 @@ const NavLink = ({ href, label, className }: NavLinkProps) => {
       className={cn(
         'transition-colors duration-300 hover:text-indigo-400',
         isActive && 'text-indigo-400',
+        isMobile && 'text-2xl',
         className
       )}
     >
