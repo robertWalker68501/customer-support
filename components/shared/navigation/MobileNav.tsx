@@ -14,7 +14,7 @@ import {
 const MobileNav = ({ links }: MobileNavProps) => {
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger aria-label='Open navigation menu'>
         <MenuIcon size={24} />
       </SheetTrigger>
       <SheetContent>
